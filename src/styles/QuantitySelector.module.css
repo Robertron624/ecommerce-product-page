@@ -1,0 +1,13 @@
+.quantity_container {
+    background-color: #f7f8fd;
+}
+
+.quantity_minus {
+    width: 10px;
+    height: 2px;
+}
+
+.quantity_plus {
+    width: 10px;
+    height: 10px;
+}

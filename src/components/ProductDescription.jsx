@@ -16,7 +16,7 @@ const ProductDescription = () => {
             <div className="product-price mt-5 flex justify-between">
                 <div className="flex gap-3">
                     <span className="text-xl font-bold">$125.00</span>
-                    <span className={`text-orange text-sm rounded-md text ${styles.discount}`}>50%</span>
+                    <span className={`font-bold text-orange text-sm rounded-md text ${styles.discount}`}>50%</span>
                 </div>
                 <span className={`line-through ${styles.normal_price}`}>$250.00</span>
             </div>

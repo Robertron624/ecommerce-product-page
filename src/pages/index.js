@@ -5,6 +5,7 @@ import styles from '@/styles/Home.module.css'
 import Header from '@/components/Header'
 import HomeSlider from '@/components/HomeSlider'
 import ProductDescription from '@/components/ProductDescription'
+import AddToCartButton from '@/components/AddToCartButton'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,6 +22,7 @@ export default function Home() {
       <main className={styles.main}>
         <HomeSlider/>
         <ProductDescription/>
+        <AddToCartButton/>
       </main>
     </>
   )
