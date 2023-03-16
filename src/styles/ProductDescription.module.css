@@ -1,0 +1,14 @@
+.text_desc {
+    font-size: 0.75rem;
+    line-height: 20px;
+}
+
+.discount {
+    padding: .1rem .2rem;
+    background-color: #faeed9;
+}
+
+.normal_price {
+    --grayish-blue: hsl(220, 14%, 75%);
+    color: var(--grayish-blue);
+}
