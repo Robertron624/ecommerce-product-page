@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import Carousel from "react-material-ui-carousel";
+import styles from "@/styles/HomeSlider.module.css"
 
 const HomeSlider = () => {
     const images = [
@@ -10,12 +11,16 @@ const HomeSlider = () => {
     ];
 
     return (
-        <div className="">
+
             <Carousel
-                height={300}
                 className={``}
+                height={300}
+
+                swipe={true}
+
                 NextIcon={
                     <Image
+                        className="next-icon"
                         width={30}
                         height={30}
                         src="/icon-next.svg"
@@ -25,6 +30,7 @@ const HomeSlider = () => {
 
                 PrevIcon={
                     <Image
+                        className="prev-icon"
                         width={30}
                         height={30}
                         src="/icon-previous.svg"
@@ -34,7 +40,7 @@ const HomeSlider = () => {
             >
                 {images.map((image, index) => (
                     <Image
-                        className=""
+                        className={`${styles.slider_image}`}
                         width={300}
                         height={400}
                         src={image}
@@ -43,7 +49,6 @@ const HomeSlider = () => {
                     />
                 ))}
             </Carousel>
-        </div>
     );
 };
 
