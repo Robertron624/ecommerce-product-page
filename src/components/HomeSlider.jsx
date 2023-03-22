@@ -13,7 +13,7 @@ const HomeSlider = () => {
     return (
 
             <Carousel
-                className={``}
+                className={`w-screen`}
                 height={300}
 
                 swipe={true}
