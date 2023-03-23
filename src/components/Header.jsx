@@ -3,9 +3,11 @@ import {useState} from "react";
 import { Drawer, Box } from "@mui/material";
 import styles from "@/styles/Header.module.css";
 import MobileMenu from "./MobileMenu";
+import Minicart from "./Minicart";
 
 const Header = () => {
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+    const [isMinicartOpen, setIsMinicartOpen] = useState(false);
 
     const toggleDrawer = (open) => (event) => {
         if (
@@ -65,7 +67,7 @@ const Header = () => {
                         </Box>
                     </Drawer>
                 </div>
-                <div className="right flex gap-4">
+                <div className="right flex gap-4 relative">
                     <Image
                         width={20}
                         height={20}
@@ -76,10 +78,11 @@ const Header = () => {
                         height={20}
                         width={20}
                         src="/image-avatar.png"
-                        alt="user-avatar"
+                        alt="user-avatar" 
                     />
                 </div>
             </div>
+            <Minicart/>
         </header>
     );
 };
