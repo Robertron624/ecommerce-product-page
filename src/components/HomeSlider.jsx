@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import Carousel from "react-material-ui-carousel";
 import styles from "@/styles/HomeSlider.module.css"
+import { Paper, Button } from "@mui/material";
 
 const HomeSlider = () => {
     const images = [
@@ -18,11 +19,19 @@ const HomeSlider = () => {
 
                 swipe={true}
 
+                navButtonsAlwaysVisible={true}
+
+                navButtonsProps={{
+                    style: {
+                        backgroundColor: 'white'
+                    }
+                }}
+
                 NextIcon={
                     <Image
                         className="next-icon"
-                        width={30}
-                        height={30}
+                        width={15}
+                        height={15}
                         src="/icon-next.svg"
                         alt="next icon"
                     ></Image>
@@ -31,8 +40,8 @@ const HomeSlider = () => {
                 PrevIcon={
                     <Image
                         className="prev-icon"
-                        width={30}
-                        height={30}
+                        width={15}
+                        height={15}
                         src="/icon-previous.svg"
                         alt="next icon"
                     />
