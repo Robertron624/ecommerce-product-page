@@ -1,14 +1,16 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import styles from "@/styles/Minicart.module.css";
 import Image from "next/image";
 
 const Minicart = ({ isMinicartOpen }) => {
 
+    const quantity = useSelector((state) => state.product.quantity);
+
     const productsOnCart = [
         {
             productName: "Fall Limited Edition Sneakers",
             unitaryPrice: 125.0,
-            productUnits: 3,
             productImage: "/image-product-1-thumbnail.jpg",
         },
     ];
@@ -25,7 +27,6 @@ const Minicart = ({ isMinicartOpen }) => {
                     const {
                         productName,
                         unitaryPrice,
-                        productUnits,
                         productImage,
                     } = product;
                     return (
@@ -45,11 +46,11 @@ const Minicart = ({ isMinicartOpen }) => {
                                 >
                                     <p>{productName}</p>
                                     <p>
-                                        ${unitaryPrice} x {productUnits}
+                                        ${unitaryPrice} x {quantity}
                                         <span
                                             className={`font-bold ml-2 ${styles.priceUnit}`}
                                         >
-                                            ${unitaryPrice * productUnits}
+                                            ${unitaryPrice * quantity}
                                         </span>
                                     </p>
                                 </div>

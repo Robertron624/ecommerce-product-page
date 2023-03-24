@@ -12,13 +12,16 @@
     "@mui/icons-material": "^5.11.11",
     "@mui/material": "^5.11.13",
     "@mui/styles": "^5.11.13",
+    "@reduxjs/toolkit": "^1.9.3",
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
     "next": "13.2.4",
+    "next-redux-wrapper": "^8.1.0",
     "or": "^0.2.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-material-ui-carousel": "^3.4.2"
+    "react-material-ui-carousel": "^3.4.2",
+    "react-redux": "^8.0.5"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",

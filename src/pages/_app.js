@@ -1,9 +1,10 @@
 import '@/styles/globals.css'
 import { Kumbh_Sans } from 'next/font/google'
+import { wrapper } from '@/redux/store'
 
 const kumbh = Kumbh_Sans({weight: ['400', '700'], subsets: ['latin']}) 
 
-export default function App({ Component, pageProps }) {
+function App({ Component, pageProps }) {
   return (
     <>
       <style jsx global>{`
@@ -15,3 +16,5 @@ export default function App({ Component, pageProps }) {
     </>
   )
 }
+
+export default wrapper.withRedux(App)

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { useSelector } from "react-redux";
 import { Drawer, Box } from "@mui/material";
 import styles from "@/styles/Header.module.css";
 import MobileMenu from "./MobileMenu";
@@ -11,6 +12,8 @@ const menuLinks = ["colections", "men", "women", "about", "contact"];
 const Header = () => {
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
     const [isMinicartOpen, setIsMinicartOpen] = useState(false);
+
+    const quantity = useSelector((state) => state.product.quantity);
 
     const toggleDrawer = (open) => (event) => {
         if (
@@ -92,7 +95,7 @@ const Header = () => {
                             onClick={handleMinicart}
                             className={`cursor-pointer ${styles.minicartIcon}`}
                         />
-                        <span className={`${styles.minicartBadge} absolute`}>1</span>
+                        <span className={`${styles.minicartBadge} absolute`}>{quantity}</span>
                     </div>
                     <Image
                         height={38}
