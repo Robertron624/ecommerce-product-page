@@ -255,6 +255,10 @@
   .grid {
     grid-template-columns: repeat(2, 50%);
   }
+
+  .main {
+    flex-direction: row;
+  }
 }
 
 @media (prefers-color-scheme: dark) {

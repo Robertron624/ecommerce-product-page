@@ -14,7 +14,7 @@ const HomeSlider = () => {
     return (
 
             <Carousel
-                className={`w-screen`}
+                className={`w-screen md:hidden`}
                 height={300}
 
                 swipe={true}

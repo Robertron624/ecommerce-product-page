@@ -6,6 +6,7 @@ import Header from '@/components/Header'
 import HomeSlider from '@/components/HomeSlider'
 import ProductDescription from '@/components/ProductDescription'
 import AddToCartButton from '@/components/AddToCartButton'
+import DesktopImageSelector from '@/components/DesktopImageSelector'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,10 +20,13 @@ export default function Home() {
         <link rel="icon" href="/favicon-32x32.png" />
       </Head>
       <Header />
-      <main className={styles.main}>
+      <main className={`${styles.main}`}>
         <HomeSlider/>
-        <ProductDescription/>
-        <AddToCartButton/>
+        <DesktopImageSelector/>
+        <div className='items-center flex flex-col'>
+          <ProductDescription/>
+          <AddToCartButton/>
+        </div>
       </main>
     </>
   )
