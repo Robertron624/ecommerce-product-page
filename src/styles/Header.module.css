@@ -16,3 +16,27 @@
     --black: hsl(0, 0%, 0%);
     background-color: var(--white);
 }
+
+/* .desktopLinks {
+    width: 8rem;
+} */
+
+.desktopLink {
+    color: var(--dark-grayish-blue);
+    font-size: 14px;
+}
+
+@media screen and (min-width: 768px){
+    .menuTrigger {
+        display: none;
+    }
+
+    .desktopLinks {
+        display: flex;
+    }
+
+    .headerOuter {
+        max-width: 1280px;
+        margin-inline: auto;
+    }
+}

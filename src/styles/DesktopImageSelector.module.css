@@ -1,3 +1,18 @@
 .container {
     width: 50%;
 }
+
+.mainImage img {
+    width: 22rem;
+    margin-inline: auto;
+    border-radius: 10px;
+}
+
+.selectedThumbnail {
+    border: 2px solid hsl(26, 100%, 55%);
+}
+
+.selectedThumbnail img{
+    opacity: .5;
+}
+

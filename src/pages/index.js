@@ -11,6 +11,7 @@ import DesktopImageSelector from '@/components/DesktopImageSelector'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+
   return (
     <>
       <Head>

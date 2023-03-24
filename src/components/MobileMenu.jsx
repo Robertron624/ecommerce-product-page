@@ -1,9 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 
-const menuLinks = ["colections", "men", "women", "about", "contact"]
-
-const MobileMenu = () => {
+const MobileMenu = ({menuLinks}) => {
   return (
     <ul>
         {menuLinks.map((menuLink, i) => {

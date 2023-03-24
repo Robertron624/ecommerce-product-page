@@ -3,7 +3,6 @@ import styles from "@/styles/Minicart.module.css";
 import Image from "next/image";
 
 const Minicart = ({ isMinicartOpen }) => {
-    console.log(isMinicartOpen);
 
     const productsOnCart = [
         {

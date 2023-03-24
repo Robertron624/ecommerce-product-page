@@ -1,9 +1,12 @@
 import Image from "next/image";
-import {useState} from "react";
+import Link from "next/link";
+import { useState } from "react";
 import { Drawer, Box } from "@mui/material";
 import styles from "@/styles/Header.module.css";
 import MobileMenu from "./MobileMenu";
 import Minicart from "./Minicart";
+
+const menuLinks = ["colections", "men", "women", "about", "contact"];
 
 const Header = () => {
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -21,8 +24,8 @@ const Header = () => {
     };
 
     const handleMinicart = () => {
-        setIsMinicartOpen((isMinicartOpen) => !isMinicartOpen)
-    }
+        setIsMinicartOpen((isMinicartOpen) => !isMinicartOpen);
+    };
 
     return (
         <header className={`py-5 ${styles.headerOuter}`}>
@@ -34,6 +37,7 @@ const Header = () => {
                         height={20}
                         src="/icon-menu.svg"
                         alt="menu trigger icon"
+                        className={styles.menuTrigger}
                     />
                     <Image
                         height={90}
@@ -41,6 +45,13 @@ const Header = () => {
                         alt="/site logo"
                         src="logo.svg"
                     />
+                    <ul className={`ml-6 hidden justify-between gap-7 ${styles.desktopLinks}`}>
+                        {menuLinks.map((menuLink, i) => (
+                            <li key={i}>
+                                <Link className={`capitalize ${styles.desktopLink}`} href={`/${menuLink}`}>{menuLink}</Link>
+                            </li>
+                        ))}
+                    </ul>
                     <Drawer
                         anchor="left"
                         open={isDrawerOpen}
@@ -67,7 +78,7 @@ const Header = () => {
                                     className={`mb-6`}
                                 />
                             </div>
-                            <MobileMenu/>
+                            <MobileMenu menuLinks={menuLinks} />
                         </Box>
                     </Drawer>
                 </div>
@@ -83,11 +94,11 @@ const Header = () => {
                         height={20}
                         width={20}
                         src="/image-avatar.png"
-                        alt="user-avatar" 
+                        alt="user-avatar"
                     />
                 </div>
             </div>
-            <Minicart isMinicartOpen={isMinicartOpen}/>
+            <Minicart isMinicartOpen={isMinicartOpen} />
         </header>
     );
 };
