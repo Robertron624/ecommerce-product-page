@@ -82,19 +82,24 @@ const Header = () => {
                         </Box>
                     </Drawer>
                 </div>
-                <div className="right flex gap-4 relative">
+                <div className="right flex gap-4 relative items-center">
+                    <div className={`relative`}>
+                        <Image
+                            width={20}
+                            height={20}
+                            src="/icon-cart.svg"
+                            alt="minicart icon"
+                            onClick={handleMinicart}
+                            className={`cursor-pointer ${styles.minicartIcon}`}
+                        />
+                        <span className={`${styles.minicartBadge} absolute`}>1</span>
+                    </div>
                     <Image
-                        width={20}
-                        height={20}
-                        src="/icon-cart.svg"
-                        alt="minicart icon"
-                        onClick={handleMinicart}
-                    />
-                    <Image
-                        height={20}
-                        width={20}
+                        height={38}
+                        width={38}
                         src="/image-avatar.png"
                         alt="user-avatar"
+                        className={`${styles.userAvatar} cursor-pointer`}
                     />
                 </div>
             </div>

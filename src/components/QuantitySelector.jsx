@@ -8,9 +8,9 @@ const QuantitySelector = () => {
 
   return (
     <div className={`mt-5 rounded-md py-3 px-2 w-full flex justify-between items-center ${styles.quantity_container}`}>
-        <Image className={styles.quantity_minus} width={10} height={1} alt='quantity minus' src="/icon-minus.svg"/>
+        <Image className={`${styles.quantity_minus} cursor-pointer`} width={10} height={1} alt='quantity minus' src="/icon-minus.svg"/>
         <span className='font-bold'>{quantity}</span>
-        <Image className={styles.quantity_plus} width={10} height={5} src="/icon-plus.svg" alt='quantity plus'/>
+        <Image className={`${styles.quantity_plus} cursor-pointer`} width={10} height={5} src="/icon-plus.svg" alt='quantity plus'/>
     </div>
   )
 }

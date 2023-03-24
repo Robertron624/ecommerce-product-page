@@ -37,3 +37,13 @@
 .productDetails {
     width: 90%;
 }
+
+@media screen and (min-width: 768px){
+    .minicartOuter {
+        width: 23rem;
+        top: 15%;
+        right: 2.5%;
+        left: unset;
+        box-shadow: 4px 2px 8px 10px rgba(0, 0, 0, .6);
+    }
+}

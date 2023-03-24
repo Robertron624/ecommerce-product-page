@@ -21,6 +21,21 @@
     width: 8rem;
 } */
 
+.minicartIcon {
+    width: 20px;
+    height: 20px;
+}
+
+.minicartBadge {
+    background-color: var(--orange);
+    color: white;
+    font-size: 10px;
+    padding: 0.2rem .51rem;
+    border-radius: 50%;
+    bottom: 80%;
+    left: 50%;
+}
+
 .desktopLink {
     color: var(--dark-grayish-blue);
     font-size: 14px;
@@ -38,5 +53,14 @@
     .headerOuter {
         max-width: 1280px;
         margin-inline: auto;
+    }
+
+    .userAvatar {
+        transition: .51s ease-in-out;
+        border-radius: 20px;
+    }
+
+    .userAvatar:hover{
+        border: 1.5px solid var(--orange);
     }
 }
