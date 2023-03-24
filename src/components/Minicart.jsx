@@ -3,6 +3,8 @@ import styles from "@/styles/Minicart.module.css";
 import Image from "next/image";
 
 const Minicart = ({ isMinicartOpen }) => {
+    console.log(isMinicartOpen);
+
     const productsOnCart = [
         {
             productName: "Fall Limited Edition Sneakers",
@@ -14,7 +16,7 @@ const Minicart = ({ isMinicartOpen }) => {
 
     return (
         <div
-            className={`absolute flex flex-col justify-around rounded-lg z-20 py-5 ${styles.minicartOuter}`}
+            className={`${isMinicartOpen ? '' : 'hidden'} absolute flex flex-col justify-around rounded-lg z-20 py-5 ${styles.minicartOuter}`}
         >
             <div className={`pl-4 pb-6 border-b-2 ${styles.header}`}>
                 <p className="font-bold">Cart</p>
@@ -36,7 +38,9 @@ const Minicart = ({ isMinicartOpen }) => {
                                 height={20}
                                 alt="product image"
                             />
-                            <div className={`flex items-center w-full justify-between`}>
+                            <div
+                                className={`flex items-center w-full justify-between`}
+                            >
                                 <div
                                     className={`flex flex-col ${styles.productName}`}
                                 >
@@ -50,7 +54,13 @@ const Minicart = ({ isMinicartOpen }) => {
                                         </span>
                                     </p>
                                 </div>
-                                <Image className={`${styles.trashCan}`} width={10} height={10}  src="/icon-delete.svg" alt="remove product icon"/>
+                                <Image
+                                    className={`${styles.trashCan}`}
+                                    width={10}
+                                    height={10}
+                                    src="/icon-delete.svg"
+                                    alt="remove product icon"
+                                />
                             </div>
                         </div>
                     );

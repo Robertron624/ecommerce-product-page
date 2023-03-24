@@ -20,6 +20,10 @@ const Header = () => {
         setIsDrawerOpen(open);
     };
 
+    const handleMinicart = () => {
+        setIsMinicartOpen((isMinicartOpen) => !isMinicartOpen)
+    }
+
     return (
         <header className={`py-5 ${styles.headerOuter}`}>
             <div className="inner flex justify-between px-6">
@@ -73,6 +77,7 @@ const Header = () => {
                         height={20}
                         src="/icon-cart.svg"
                         alt="minicart icon"
+                        onClick={handleMinicart}
                     />
                     <Image
                         height={20}
@@ -82,7 +87,7 @@ const Header = () => {
                     />
                 </div>
             </div>
-            <Minicart/>
+            <Minicart isMinicartOpen={isMinicartOpen}/>
         </header>
     );
 };
