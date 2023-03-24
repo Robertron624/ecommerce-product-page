@@ -24,7 +24,7 @@ export default function Home() {
       <main className={`${styles.main}`}>
         <HomeSlider/>
         <DesktopImageSelector/>
-        <div className='items-center flex flex-col'>
+        <div className={`items-center flex flex-col ${styles.descriptionArea}`}>
           <ProductDescription/>
           <AddToCartButton/>
         </div>

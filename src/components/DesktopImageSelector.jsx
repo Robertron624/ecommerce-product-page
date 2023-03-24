@@ -34,7 +34,7 @@ const DesktopImageSelector = () => {
     }
 
     return (
-        <div className={`${styles.container} flex flex-col gap-5`}>
+        <div className={`${styles.container} hidden flex-col gap-5 md:flex`}>
             <div className={`${styles.mainImage}`}>
                 <Image
                     src={currentImage.bigImage}

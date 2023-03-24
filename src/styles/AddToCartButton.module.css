@@ -5,3 +5,20 @@
 .add_icon {
     color: white;
 }
+
+.addAndQuantity {
+    width: 90vw;
+}
+
+@media screen and (min-width: 768px){
+    .addAndQuantity {
+        width: 70%;
+        flex-direction: row;
+        margin-top: 2.5rem;
+    }
+
+    .add_to_cart_btn {
+        width: 60%;
+    }
+    
+}

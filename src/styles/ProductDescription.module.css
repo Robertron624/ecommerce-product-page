@@ -1,3 +1,7 @@
+.container {
+    width: 60%;
+}
+
 .text_desc {
     font-size: 0.75rem;
     line-height: 20px;
@@ -11,4 +15,15 @@
 .normal_price {
     --grayish-blue: hsl(220, 14%, 75%);
     color: var(--grayish-blue);
+}
+
+@media screen and (min-width: 768px){
+    .container {
+        width: 70%;
+        padding: 0;
+    }
+
+    .productPrice {
+        flex-direction: column;
+    }
 }

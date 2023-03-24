@@ -261,6 +261,10 @@
     max-width: 1280px;
     margin-inline: auto;
   }
+
+  .descriptionArea {
+    width: 50%;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
