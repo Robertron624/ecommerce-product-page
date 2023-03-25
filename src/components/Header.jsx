@@ -48,10 +48,17 @@ const Header = () => {
                         alt="/site logo"
                         src="logo.svg"
                     />
-                    <ul className={`ml-6 hidden justify-between gap-7 ${styles.desktopLinks}`}>
+                    <ul
+                        className={`ml-6 hidden justify-between gap-7 ${styles.desktopLinks}`}
+                    >
                         {menuLinks.map((menuLink, i) => (
                             <li key={i}>
-                                <Link className={`capitalize ${styles.desktopLink}`} href={`/${menuLink}`}>{menuLink}</Link>
+                                <Link
+                                    className={`capitalize ${styles.desktopLink}`}
+                                    href={`/${menuLink}`}
+                                >
+                                    {menuLink}
+                                </Link>
                             </li>
                         ))}
                     </ul>
@@ -95,7 +102,13 @@ const Header = () => {
                             onClick={handleMinicart}
                             className={`cursor-pointer ${styles.minicartIcon}`}
                         />
-                        <span className={`${styles.minicartBadge} absolute`}>{quantity}</span>
+                        {quantity > 0 && (
+                            <span
+                                className={`${styles.minicartBadge} absolute`}
+                            >
+                                {quantity}
+                            </span>
+                        )}
                     </div>
                     <Image
                         height={38}

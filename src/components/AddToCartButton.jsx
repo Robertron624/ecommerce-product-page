@@ -1,15 +1,28 @@
 import Image from "next/image";
 import React from "react";
+import { useSelector ,useDispatch } from "react-redux";
+import { addOne } from "@/redux/productSlice";
 import styles from "@/styles/AddToCartButton.module.css";
 import QuantitySelector from "./QuantitySelector";
 
 const AddToCartButton = () => {
+
+    const dispatch = useDispatch();
+    const quantity = useSelector((state) => state.product.quantity);
+
+    const handleAddToCart = () => {
+        if(quantity == 0){
+            dispatch(addOne())
+        }
+    }
+
     return (
         <div
             className={`${styles.addAndQuantity} flex flex-col items-center justify-center gap-4`}
         >
             <QuantitySelector />
             <button
+                onClick={handleAddToCart}
                 className={`mb-5 shadow-sm shadow-orange md:mb-0 cursor-pointer rounded-md py-3 w-full bg-orange justify-center font-bold flex gap-4 ${styles.add_to_cart_btn}`}
             >
                 <svg
