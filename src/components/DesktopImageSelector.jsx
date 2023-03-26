@@ -70,7 +70,7 @@ const DesktopImageSelector = () => {
                     <div
                         onClick={() => handleChange(image.id)}
                         key={index}
-                        className={`rounded-md cursor-pointer ${
+                        className={`rounded-md cursor-pointer ${styles.thumbnail} ${
                             currentImage.id == image.id
                                 ? styles.selectedThumbnail
                                 : ""

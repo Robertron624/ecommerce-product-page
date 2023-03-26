@@ -50,14 +50,21 @@ const ModalContent = ({ productImages }) => {
             <div className="relative mt-5">
                 <div
                     onClick={goPrevious}
-                    className={`absolute cursor-pointer ${styles.previousIcon}`}
+                    className={`absolute cursor-pointer ${styles.previousIcon} ${styles.navigationIcon}`}
                 >
-                    <Image
-                        alt="previous image"
-                        src="/icon-previous.svg"
-                        width={10}
-                        height={10}
-                    />
+                    <svg
+                        width="12"
+                        height="18"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M11 1 3 9l8 8"
+                            stroke="currentcolor"
+                            stroke-width="3"
+                            fill="none"
+                            fill-rule="evenodd"
+                        />
+                    </svg>
                 </div>
                 <Image
                     width={560}
@@ -68,14 +75,21 @@ const ModalContent = ({ productImages }) => {
                 />
                 <div
                     onClick={goNext}
-                    className={`absolute cursor-pointer ${styles.nextIcon}`}
+                    className={`absolute cursor-pointer ${styles.nextIcon} ${styles.navigationIcon}`}
                 >
-                    <Image
-                        alt="next image"
-                        width={10}
-                        height={10}
-                        src="/icon-next.svg"
-                    />
+                    <svg
+                        width="13"
+                        height="18"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="m2 1 8 8-8 8"
+                            stroke="currentcolor"
+                            stroke-width="3"
+                            fill="none"
+                            fill-rule="evenodd"
+                        />
+                    </svg>
                 </div>
             </div>
             <div className="flex mt-6 justify-between">
@@ -83,7 +97,7 @@ const ModalContent = ({ productImages }) => {
                     <div
                         onClick={() => handleChange(image.id)}
                         key={index}
-                        className={`rounded-md cursor-pointer ${
+                        className={`rounded-md cursor-pointer ${styles.thumbnail} ${
                             currentImage.id == image.id ? styles.selected : ""
                         }`}
                     >
