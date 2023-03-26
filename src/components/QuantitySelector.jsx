@@ -9,9 +9,6 @@ const QuantitySelector = () => {
     const dispatch = useDispatch()
 
     const quantity = useSelector(state => state.product.quantity)
-
-    console.log("first quantity -> ", quantity)
-
     const addOneCall = () => {
       dispatch(addOne())
     }
