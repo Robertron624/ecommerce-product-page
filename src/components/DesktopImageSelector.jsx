@@ -63,6 +63,7 @@ const DesktopImageSelector = () => {
                     height={590}
                     alt="current product image"
                     onClick={handleOpen}
+                    priority={true}
                 />
             </div>
             <div className={`flex mx-auto gap-4`}>

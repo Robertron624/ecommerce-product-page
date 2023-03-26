@@ -97,7 +97,7 @@ const Header = () => {
                     </Drawer>
                 </div>
                 <div className="right flex gap-4 relative items-center">
-                    <div className={`relative`}>
+                    <div className={`relative`} >
                         <Image
                             width={20}
                             height={20}
@@ -123,7 +123,7 @@ const Header = () => {
                     />
                 </div>
             </div>
-            <Minicart isMinicartOpen={isMinicartOpen} />
+            <Minicart isMinicartOpen={isMinicartOpen} setIsMinicartOpen={setIsMinicartOpen}/>
         </header>
     );
 };

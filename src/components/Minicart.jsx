@@ -1,12 +1,24 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { removeAll } from '@/redux/productSlice'
 import styles from "@/styles/Minicart.module.css";
 import Image from "next/image";
 
-const Minicart = ({ isMinicartOpen }) => {
+const Minicart = ({ isMinicartOpen, setIsMinicartOpen }) => {
     const quantity = useSelector((state) => state.product.quantity);
     const dispatch = useDispatch()
+
+    const refOne = useRef(null);
+
+    useEffect(() => {
+        document.addEventListener("mousedown", closeOutside, true);
+    }, []);
+
+    const closeOutside = (e) => {
+        if (refOne.current && !refOne.current.contains(e.target)) {
+            setIsMinicartOpen(false);
+        }
+    }
 
     const productsOnCart = [
         {
@@ -22,6 +34,7 @@ const Minicart = ({ isMinicartOpen }) => {
 
     return (
         <div
+            ref={refOne}
             className={`${
                 isMinicartOpen ? "" : "hidden"
             } absolute flex flex-col justify-around rounded-lg z-20 py-5 ${
