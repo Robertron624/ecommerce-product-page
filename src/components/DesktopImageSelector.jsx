@@ -54,9 +54,9 @@ const DesktopImageSelector = () => {
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
             >
-                <ModalContent productImages={productImages}/>
+                <ModalContent productImages={productImages} handleClose={handleClose}/>
             </Modal>
-            <div className={`${styles.mainImage}`}>
+            <div className={`${styles.mainImage} cursor-pointer`}>
                 <Image
                     src={currentImage.bigImage}
                     width={560}

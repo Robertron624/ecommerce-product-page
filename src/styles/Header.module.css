@@ -17,11 +17,6 @@
     background-color: var(--white);
 }
 
-.headerInner {
-    border-bottom: 1px solid var(--grayish-blue);
-    height: 4rem;
-}
-
 .minicartIcon {
     width: 20px;
     height: 20px;
@@ -58,6 +53,11 @@
 @media screen and (min-width: 768px){
     .menuTrigger {
         display: none;
+    }
+
+    .headerInner {
+        border-bottom: 1px solid var(--grayish-blue);
+        height: 4rem;
     }
 
     .desktopLinks {

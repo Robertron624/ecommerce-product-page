@@ -47,7 +47,7 @@ const Header = () => {
                         width={100}
                         alt="/site logo"
                         src="logo.svg"
-                        className={`self-start`}
+                        className={`md:self-start`}
                     />
                     <ul
                         className={`ml-6 hidden justify-between gap-7 h-full ${styles.desktopLinks}`}
@@ -97,7 +97,7 @@ const Header = () => {
                         </Box>
                     </Drawer>
                 </div>
-                <div className="right flex gap-14 relative items-start">
+                <div className="right flex md:gap-14 gap-4 relative md:items-start items-center">
                     <div className={`relative`} >
                         <Image
                             width={20}
