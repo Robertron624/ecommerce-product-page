@@ -4,19 +4,17 @@ This is a solution to the [E-commerce product page challenge on Frontend Mentor]
 
 ## Table of contents
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
+-   [Overview](#overview)
+    -   [The challenge](#the-challenge)
+    -   [Screenshot](#screenshot)
+    -   [Links](#links)
+-   [My process](#my-process)
+    -   [Built with](#built-with)
+    -   [What I learned](#what-i-learned)
+    -   [Continued development](#continued-development)
+    -   [Useful resources](#useful-resources)
+-   [Author](#author)
+-   [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -24,88 +22,76 @@ This is a solution to the [E-commerce product page challenge on Frontend Mentor]
 
 Users should be able to:
 
-- View the optimal layout for the site depending on their device's screen size
-- See hover states for all interactive elements on the page
-- Open a lightbox gallery by clicking on the large product image
-- Switch the large product image by clicking on the small thumbnail images
-- Add items to the cart
-- View the cart and remove items from it
+-   View the optimal layout for the site depending on their device's screen size
+-   See hover states for all interactive elements on the page
+-   Open a lightbox gallery by clicking on the large product image
+-   Switch the large product image by clicking on the small thumbnail images
+-   Add items to the cart
+-   View the cart and remove items from it
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+-   Solution URL: [Solution URL](https://github.com/Robertron624/ecommerce-product-page)
+-   Live Site URL: [Live site URL](https://illustrious-souffle-a64116.netlify.app/)
 
 ## My process
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Tailwind CSS](https://tailwindcss.com/docs/) - For styles
-- [Material UI] (https://mui.com/) - for UI components
+-   Semantic HTML5 markup
+-   CSS custom properties
+-   Flexbox
+-   CSS Grid
+-   Mobile-first workflow
+-   [React](https://reactjs.org/) - JS library
+-   [Next.js](https://nextjs.org/) - React framework
+-   [Tailwind CSS](https://tailwindcss.com/docs/) - For styles
+-   [Material UI](https://mui.com/) - for UI components
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+I learned a lot with this project, primarily the NextJs metaframework, which is a very powerful tool for creating React applications, I also learned how to use Redux in a NextJs project, which is very useful for managing the state of the application, and be able to use it in any component of the application. for styling I used TailwindCSS, which is a very powerful tool for creating styles, and I also used Material UI for some components, such as the carousel, the modal and the mobile menu.
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
+The code belows handles the minicart, it closes when you click outside of it.
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+    useEffect(() => {
+        document.addEventListener("mousedown", closeOutside, true);
+    }, []);
+
+    const closeOutside = (e) => {
+        if (refOne.current && !refOne.current.contains(e.target)) {
+            setIsMinicartOpen(false);
+        }
+    }
+
+    <div
+      ref={refOne}
+      className={`${
+      isMinicartOpen ? "" : "hidden"
+          } absolute flex flex-col justify-around rounded-lg z-20 py-5 ${
+                styles.minicartOuter
+          }`}
+    >
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+This marks my first intermediate challenge, and I am very happy with the result, I learned a lot and I am very happy with the result, I will continue to improve my skills in React and NextJs, and I will continue to improve my skills in TailwindCSS and Material UI and more complex animations and applications.
 
 ### Useful resources
 
-- [react-material-ui-carousel docs](https://www.npmjs.com/package/react-material-ui-carousel) - This helped me for adding the product image carousel easily.
-- [How to use redux in nextjs](https://blog.logrocket.com/use-redux-next-js/) - This is an amazing article which helped me finally understand how to use redux in nextjs.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
-
+-   [react-material-ui-carousel docs](https://www.npmjs.com/package/react-material-ui-carousel) - This helped me for adding the product image carousel easily.
+-   [How to use redux in nextjs](https://blog.logrocket.com/use-redux-next-js/) - This is an amazing article which helped me finally understand how to use redux in nextjs.
+-   [Detect Outside Click for Any Element in ReactJS | Most Easiest Method](hhttps://www.youtube.com/watch?v=Tj499K6bGhU) - This helped me for closing the minicart when you click outside of it by using the useRef hook.
 ## Author
 
-- Personal Website - [Robert Ramirez](https://robert-ramirez.netlify.app)
-- Frontend Mentor User- [@Robertron624](https://www.frontendmentor.io/profile/Robertron624)
-- Twitter - [@robertdowny](https://www.twitter.com/robertdowny)
+-   Personal Website - [Robert Ramirez](https://robert-ramirez.netlify.app)
+-   Frontend Mentor User- [@Robertron624](https://www.frontendmentor.io/profile/Robertron624)
+-   Twitter - [@robertdowny](https://www.twitter.com/robertdowny)
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
 ## Acknowledgments
 
