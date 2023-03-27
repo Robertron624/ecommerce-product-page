@@ -30,6 +30,7 @@ Users should be able to:
 -   View the cart and remove items from it
 
 ### Screenshot
+![image](https://user-images.githubusercontent.com/72587880/227846019-bc9fc783-1cb5-484d-bfcb-62f3fbee3902.png)
 
 
 ### Links
