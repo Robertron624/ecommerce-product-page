@@ -32,7 +32,7 @@ const Header = () => {
 
     return (
         <header className={`py-5 ${styles.headerOuter}`}>
-            <div className="inner flex justify-between px-6">
+            <div className={`inner flex justify-between px-6 ${styles.headerInner}`}>
                 <div className=" gap-3 flex items-center">
                     <Image
                         onClick={toggleDrawer(true)}
@@ -47,12 +47,13 @@ const Header = () => {
                         width={100}
                         alt="/site logo"
                         src="logo.svg"
+                        className={`self-start`}
                     />
                     <ul
-                        className={`ml-6 hidden justify-between gap-7 ${styles.desktopLinks}`}
+                        className={`ml-6 hidden justify-between gap-7 h-full ${styles.desktopLinks}`}
                     >
                         {menuLinks.map((menuLink, i) => (
-                            <li key={i}>
+                            <li key={i} className={`${styles.liHeader} flex`}>
                                 <Link
                                     className={`capitalize ${styles.desktopLink}`}
                                     href={`/${menuLink}`}
@@ -96,7 +97,7 @@ const Header = () => {
                         </Box>
                     </Drawer>
                 </div>
-                <div className="right flex gap-4 relative items-center">
+                <div className="right flex gap-14 relative items-start">
                     <div className={`relative`} >
                         <Image
                             width={20}

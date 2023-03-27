@@ -17,9 +17,10 @@
     background-color: var(--white);
 }
 
-/* .desktopLinks {
-    width: 8rem;
-} */
+.headerInner {
+    border-bottom: 1px solid var(--grayish-blue);
+    height: 4rem;
+}
 
 .minicartIcon {
     width: 20px;
@@ -36,9 +37,22 @@
     left: 50%;
 }
 
+.liHeader{
+    transition: .5s ease-in-out;
+}
+
+.liHeader:hover {
+    border-bottom: 4px solid var(--orange);
+}
+
 .desktopLink {
     color: var(--dark-grayish-blue);
     font-size: 14px;
+    transition: .4s ease-in-out;
+}
+
+.desktopLink:hover {
+    color: var(--very-dark-blue);
 }
 
 @media screen and (min-width: 768px){
@@ -58,6 +72,7 @@
     .userAvatar {
         transition: .51s ease-in-out;
         border-radius: 20px;
+        margin-top: -10%;
     }
 
     .userAvatar:hover{
