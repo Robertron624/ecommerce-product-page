@@ -2,8 +2,9 @@
     width: 95vw;
     height: 17rem;
     background-color: white;
-    top: 11%;
-    left: 2.5%;
+    top: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .header {
@@ -49,9 +50,9 @@
 @media screen and (min-width: 768px){
     .minicartOuter {
         width: 23rem;
-        top: 12%;
-        right: 2.5%;
+        right: 0;
         left: unset;
+        transform: unset;
         box-shadow: 0px 11px 10px 0px rgba(0, 0, 0, .6);
     }
 }

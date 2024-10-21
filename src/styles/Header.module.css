@@ -72,7 +72,6 @@
     .userAvatar {
         transition: .51s ease-in-out;
         border-radius: 20px;
-        margin-top: -10%;
     }
 
     .userAvatar:hover{
