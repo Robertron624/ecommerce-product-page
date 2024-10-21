@@ -26,9 +26,10 @@ const Header = () => {
     setIsDrawerOpen(open);
   };
 
-  const handleMinicart = () => {
-    console.info("Minicart clicked, either redirect to minicart or open a modal");
-    setIsMinicartOpen((isMinicartOpen) => !isMinicartOpen);
+  const handleMinicart = (event) => {
+    event.stopPropagation();
+    console.info("Minicart clicked, new stop propagation");
+    setIsMinicartOpen((prevIsMinicartOpen) => !prevIsMinicartOpen);
   };
 
   const handleAvatarClick = () => {

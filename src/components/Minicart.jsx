@@ -11,14 +11,20 @@ const Minicart = ({ isMinicartOpen, setIsMinicartOpen }) => {
     const refOne = useRef(null);
 
     useEffect(() => {
-        document.addEventListener("mousedown", closeOutside, true);
-    }, []);
+        const closeOutside = (e) => {
+            if (refOne.current && !refOne.current.contains(e.target)) {
+                setIsMinicartOpen(false);
+            }
+        };
 
-    const closeOutside = (e) => {
-        if (refOne.current && !refOne.current.contains(e.target)) {
-            setIsMinicartOpen(false);
-        }
-    }
+        // Add the click event listener
+        document.addEventListener("click", closeOutside);
+        
+        // Cleanup the event listener
+        return () => {
+            document.removeEventListener("click", closeOutside);
+        };
+    }, [setIsMinicartOpen]);
 
     const productsOnCart = [
         {
